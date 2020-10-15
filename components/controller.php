@@ -1,8 +1,7 @@
 <?php
 
-$posts = new PostLoader();
+//$posts = new PostLoader();
 
-if(isset($_GET["submit"])){
-    $post = new Post($_GET["title"], $_GET["name"],$_GET["message"]);
-    $post->getData()->addPost($post);
+if(isset($_POST["submit"])){
+    $post = new Post($_POST["title"], $_POST["name"],$_POST["message"]);
 }

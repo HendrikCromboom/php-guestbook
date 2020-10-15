@@ -1,15 +1,15 @@
 <?php
  Class Data{
-     private array $posts;
+     private array $posts=[];
 
      public function __construct()
      {
-
-         $this->posts = unserialize(file_get_contents('data/posts.json'));
+         $this->posts = json_decode(file_get_contents('/var/www/html/php-guestbook/data/posts.json'));
 
      }
      public function addPost($post){
-         file_put_contents('data/posts.json', serialize(array_push($this->posts, $post)));
+         array_push($this->posts, $post);
+         file_put_contents('/var/www/html/php-guestbook/data/posts.json', json_encode($this->posts));
 
      }
 

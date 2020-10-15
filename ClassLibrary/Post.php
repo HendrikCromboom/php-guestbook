@@ -1,57 +1,45 @@
 <?php
 
+
+use Cassandra\Date;
+
 Class Post{
 
     private string $title;
     private string $date;
     private string $content;
     private string $author;
-    private Data $data;
+    private Serializer $ser;
 
-    public function __construct(string $title, string $content, string $author)
+    public function __construct(string $title,string $author, string $content )
     {
         $this->title = $title;
         $this->content = $content;
         $this->author = $author;
-        $this->data = new Data();
-        $this->date = new \Cassandra\Date(0);
+        $this->date = date("Y/m/d");
+        $this->ser = new Serializer($this);
 
     }
 
-    /**
-     * @return string
-     */
     public function getTitle(): string
     {
         return $this->title;
     }
-
-    /**
-     * @return string
-     */
-    public function getDate(): string
-    {
-        return $this->date;
-    }
-
-    /**
-     * @return string
-     */
     public function getContent(): string
     {
         return $this->content;
     }
 
-    /**
-     * @return string
-     */
     public function getAuthor(): string
     {
         return $this->author;
     }
-    public function getData(){
-        return $this->data;
+
+    public function getDate()
+    {
+        return $this->date;
     }
+
 
 
 
