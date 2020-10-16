@@ -4,9 +4,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include 'components/view.php';
 include 'components/model.php';
 include 'components/controller.php';
+include 'components/view.php';
+
+
 
 whatIsHappening();
 function whatIsHappening() {

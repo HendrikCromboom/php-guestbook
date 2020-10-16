@@ -17,3 +17,26 @@ echo '<br>';
 echo '<br>';
 echo '</form>';
 
+
+foreach ($posts->getLatestPosts() AS $post){
+    echo '<br>';
+    echo $post[0];
+    echo '<hr>';
+    echo '<br>';
+    echo $post[1];
+    echo '<br>';
+    echo '<br>';
+    echo $post[2];
+    echo '<hr>';
+    echo '<br>';
+    echo $post[3];
+    echo '<br>';
+    echo '<hr>';
+    echo '<br>';
+
+
+
+}
+
+
+
