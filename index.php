@@ -20,6 +20,8 @@ function whatIsHappening() {
     var_dump($_COOKIE);
     echo '<h2>$_SESSION</h2>';
     var_dump($_SESSION);
+    echo '<h2>$GLOBALS</h2>';
+    var_dump($GLOBALS);
 }
 
 
